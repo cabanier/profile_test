@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <style>
-img {
+img, canvas {
 	width: 50%;
 	height: 50%;
 }
 </style>
+<script>
+function load() {
+	var ctx = document.getElementById("dci_canvas").getContext("2d");
+	var img = document.getElementById("dci_image");
+	ctx.drawImage(img, 0, 0);
+}
+window.onload = load;
+</script
 <body>
-<img src="ElCapitan_dci_p3.jpg">
+<img src="ElCapitan_dci_p3.jpg" id="dci_image">
 <img src="ElCapitan_srgb.jpg">
-<img src="ElCapitan_srgb_no_profile.jpg">
+<canvas width="4256px" height="2832px" id="dci_canvas"></canvas>
 </body>
